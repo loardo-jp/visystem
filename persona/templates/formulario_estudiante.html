@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block content %}
+
+    <h2>Agregar Estudiante</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Guardar Estudiante</button>
+        <a href="{% url 'lista-estudiantes' %}" class="btn btn-danger">Regresar al listado</a>
+    </form>
+
+{% endblock %}
